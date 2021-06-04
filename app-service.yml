@@ -1,0 +1,18 @@
+#cambio
+server:
+  port: 8081    #default port where the service will be started
+
+eureka:         #tells about the Eureka server details and its refresh time
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://service-discovery:8082/eureka}
+      healthcheck:
+        enabled: true
+
+
+spring:
+  application:
+    name: microservicio-app   #current service name to be used by the eureka server
+
+
+
